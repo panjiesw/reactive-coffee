@@ -1470,7 +1470,7 @@
       rxt.mktag = mktag = function(tag) {
         return function(arg1, arg2) {
           var attrs, contents, elt, key, name, toNodes, updateContents, value, _ref, _ref1;
-          _ref = (arg1 == null) && (arg2 == null) ? [{}, null] : arg1 instanceof Object && (arg2 != null) ? [arg1, arg2] : _.isString(arg1) && (arg2 != null) ? [mkAtts(arg1), arg2] : (arg2 == null) && _.isString(arg1) || _.isNumber(arg1) || arg1 instanceof Element || arg1 instanceof RawHtml || arg1 instanceof $ || _.isArray(arg1) || arg1 instanceof ObsCell || arg1 instanceof ObsArray ? [{}, arg1] : [arg1, null], attrs = _ref[0], contents = _ref[1];
+          _ref = (arg1 == null) && (arg2 == null) ? [{}, null] : typeof arg1 === 'object' && (arg2 != null) ? [arg1, arg2] : _.isString(arg1) && (arg2 != null) ? [mkAtts(arg1), arg2] : (arg2 == null) && _.isString(arg1) || _.isNumber(arg1) || arg1 instanceof Element || arg1 instanceof RawHtml || arg1 instanceof $ || _.isArray(arg1) || arg1 instanceof ObsCell || arg1 instanceof ObsArray ? [{}, arg1] : [arg1, null], attrs = _ref[0], contents = _ref[1];
           elt = $("<" + tag + "/>");
           _ref1 = _.omit(attrs, _.keys(specialAttrs));
           for (name in _ref1) {

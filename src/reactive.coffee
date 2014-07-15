@@ -741,7 +741,7 @@ rxFactory = (_, $) ->
         [attrs, contents] =
           if not arg1? and not arg2?
             [{}, null]
-          else if arg1 instanceof Object and arg2?
+          else if typeof arg1 is 'object' and arg2?
             [arg1, arg2]
           else if _.isString(arg1) and arg2?
             [mkAtts(arg1), arg2]
